@@ -50,7 +50,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleOperatorClick(View view) {
-        this.operator = view.getTag().toString();
+        if (!this.numberA.isEmpty()) {
+            this.operator = view.getTag().toString();
+        }
         this.justUsedEqual = false;
         this.updateDisplay();
     }
